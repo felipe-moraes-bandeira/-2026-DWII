@@ -1,9 +1,15 @@
+<!--
+Disciplina : Desenvolvimento Web II (DWII)
+Aula       : 03 - php intro
+Autor      : Felipe Moraes Bandeira
+Data       : 02/03/2026
+
+-->
 <?php
+$pagina_atual = "inicio";
 $nome = "Felipe Moraes Bandeira";
 $profissao = "Estudante de tecnologia";
 $curso = "Técnico em Informática - IFPR";
-$ano = "2026";
-$pagina_atual = "inicio";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

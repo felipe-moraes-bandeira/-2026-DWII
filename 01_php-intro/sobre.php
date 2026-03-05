@@ -3,6 +3,7 @@
 
 $nome = "[Felipe Moraes Bandeira]";
 $pagina_atual = "sobre";
+$pagina_atual = "sobre";
 
 ?>
 

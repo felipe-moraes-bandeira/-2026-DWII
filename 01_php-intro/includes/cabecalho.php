@@ -8,8 +8,13 @@
     </a>
 
     <a href="sobre.php"
-       style="color: white; text-decoration: none; font-weight: bold;">
+       style="color: white; text-decoration: none; margin-right: 20px; font-weight: bold;">
         👤 Sobre
+    </a>
+  
+    <a href="projetos.php"
+        style="color: white; text-decoration: none; margin-right: 20px; font-weight: bold;">
+        📖 projetos
     </a>
 
 </nav>
