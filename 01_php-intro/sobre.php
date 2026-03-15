@@ -1,43 +1,36 @@
-<!-- 01_php-intro/sobre.php -->
 <?php
+/**
+ * ======================================================================
+ * ARQUIVO    : 01_php-intro/sobre.php
+ * Disciplina : Desenvolvimento Web II (2026-DWII)
+ * Aula       : 03 — Arquitetura Web e Introdução ao PHP
+ * Autor      : [Felipe Moraes Bandeira]
+ * ======================================================================
+ */
 
-$nome = "[Felipe Moraes Bandeira]";
-$pagina_atual = "sobre";
-$pagina_atual = "sobre";
-
+$nome           = "[Felipe Moraes Bandeira]";
+$pagina_atual   = "sobre";        // define o item ativo no menu
+$caminho_raiz   = "../";          // sobe um nível até 2026-DWII/
+$titulo_pagina  = "Sobre Mim — {$nome}";
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - <?php echo $nome; ?></title>
-</head>
+    <?php include '../includes/cabecalho.php'; ?>
+    </head>
+<body>
+<h3> Felipe.M.Bandeira</h3> 
+    Sou estudante do Instituto Federal do Paraná (IFPR) desde 2024, atualmente matriculado no curso de Informática no campus CRPG.
 
-<body style="font-family: Arial, sans-serif; margin: 0; background: #f3f4f6;">
+Possuo grande interesse na área de Engenharia Mecânica, motivado principalmente por minha experiência profissional como borracheiro, atividade que exerço há sete anos. Essa vivência prática contribuiu significativamente para o desenvolvimento de habilidades técnicas, responsabilidade e comprometimento, além de fortalecer meu interesse por processos mecânicos e soluções técnicas na área.
 
-    <?php include 'includes/cabecalho.php'; ?>
+Busco constantemente aprimorar meus conhecimentos, integrando minha formação acadêmica à experiência profissional, com o objetivo de crescer pessoal e profissionalmente.
 
-    <div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-        <h1 style="color: #3b579d;">👤 Sobre mim</h1>
 
-        <p>Olá! Sou <strong><?php echo $nome; ?></strong>, estudante de Técnico em Informática no IFPR de Ponta Grossa.</p>
+    <footer>
+   por: felipe moraes bandeira, 3° ano - 2026
+ </footer>
 
-        <p>Meu nome é Felipe, tenho 17 anos e sou estudante do curso Técnico em Informática. Possuo grande interesse pela indústria automotiva, área na qual concentro meus principais objetivos profissionais.
-
-Tenho como meta ingressar no curso de Engenharia Mecânica, buscando aprofundar meus conhecimentos técnicos e científicos para atuar no desenvolvimento e fabricação de motores.
-
-Meu maior interesse no mercado está voltado à engenharia e produção de motores, especialmente aqueles do Grupo Volkswagen e também motores de fabricantes americanos (EUA), que são referências em desempenho, tecnologia e inovação no setor automotivo.
-        </p>
-
-        <a href="index.php"
-           style="color: #3b579d; font-weight: bold;">
-           ← Voltar ao início
-        </a>
-    </div>
-
-    <?php include 'includes/rodape.php'; ?>
-
+    <?php include '../includes/rodape.php'; ?>
 </body>
 </html>

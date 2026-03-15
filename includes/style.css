@@ -1,0 +1,193 @@
+/* ════════════════════════════════════════════════════════════
+ * ARQUIVO    : includes/style.css
+ * Tema       : McLaren Turbo UI
+ * Disciplina : Desenvolvimento Web II
+ * ════════════════════════════════════════════════════════════ */
+
+
+/* ── Reset ───────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  line-height: 1.7;
+}
+
+/* ── Layout ─────────────────────────────────── */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ── Títulos ────────────────────────────────── */
+h1.titulo-secao {
+  color: #ff8700;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #ff8700;
+}
+
+/* ── NAVBAR McLaren ─────────────────────────── */
+nav {
+  background: #111;
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid #ff8700;
+  box-shadow: 0 0 10px #ff870055;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: #ff8700;
+  text-shadow: 0 0 6px #ff8700;
+}
+
+/* Página atual */
+nav a.ativo {
+  color: #ff8700;
+  border-bottom: 2px solid #ff8700;
+}
+
+/* ── Cards ─────────────────────────────────── */
+.card {
+  background: #151515;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff8700;
+  box-shadow: 0 0 15px #ff870022;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px #ff870066;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ff8700;
+  margin-bottom: 12px;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: #cfcfcf;
+}
+
+/* ── Formulários ───────────────────────────── */
+.form-container {
+  background: #151515;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 16px;
+  color: #ffbb66;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+/* Campos */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #0f0f0f;
+  color: #eee;
+  transition: 0.25s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #ff8700;
+  outline: none;
+  box-shadow: 0 0 10px #ff870088;
+}
+
+/* ── Botões ───────────────────────────────── */
+button[type="submit"] {
+  margin-top: 20px;
+  background: #ff8700;
+  color: #111;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 0 10px #ff870055;
+}
+
+button[type="submit"]:hover {
+  background: #ffa13a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #ff8700aa;
+}
+
+/* ── Alertas ─────────────────────────────── */
+
+/* ERRO */
+.alerta-erro {
+  background: #2b1010;
+  border-left: 4px solid #ff3b3b;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-top: 20px;
+}
+
+.alerta-erro h3 {
+  color: #ff5a5a;
+  margin-top: 0;
+}
+
+/* SUCESSO */
+.alerta-sucesso {
+  background: #0f2916;
+  border-left: 4px solid #36d46f;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-top: 20px;
+}
+
+.alerta-sucesso h3 {
+  color: #36d46f;
+  margin-top: 0;
+}
+
+/* ── Rodapé ─────────────────────────────── */
+footer {
+  background: #000;
+  color: #777;
+  text-align: center;
+  padding: 22px;
+  margin-top: 60px;
+  font-size: 14px;
+  border-top: 2px solid #ff870044;
+}
