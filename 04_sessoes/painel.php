@@ -8,7 +8,12 @@
 
 require_once __DIR__ . '/includes/auth.php';
 requer_login();
-
+// No painel.php, após requer_login():
+if (!isset($_SESSION['visitas'])) {
+    $_SESSION['visitas'] = 0;
+}
+$_SESSION['visitas']++;
+// A cada F5 o contador aumenta — por quê?
 
 $titulo_pagina = 'painel - área Restrita';
 $caminho_raiz  = '../';
