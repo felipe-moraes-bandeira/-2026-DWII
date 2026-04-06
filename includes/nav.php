@@ -62,6 +62,12 @@ function menu_class($item, $atual) {
     <?php echo menu_class("login", $pagina_atual); ?>>
     🔐Login
 </a>
+<a href="<?php echo $caminho_raiz; ?>04_sessoes/painel.php"
+    <?php echo menu_class("painel", $pagina_atual); ?>>
+    📊painel
+</a>
+
+
 <a href="<?php echo $caminho_raiz; ?>05_crud/cadastrar.php"
     <?php echo menu_class("cadastrar", $pagina_atual); ?>>
     ✒️cadastrar

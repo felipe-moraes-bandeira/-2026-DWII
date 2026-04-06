@@ -49,15 +49,33 @@ $aulas = [
         "cor"       => "#3ba34d",
         "conceitos" => '$_POST, validação, htmlspecialchars(), header() + exit',
     ],
-    // 👇 AQUI ESTÁ A NOVA AULA ADICIONADA! 👇
     [
         "numero"    => "05",
         "nome"      => "Catálogo de Tecnologias (PDO)",
         "descricao" => "Conexão com banco de dados MariaDB, consulta de dados e exibição segura.",
         "link"      => "03_pdo/index.php",
         "icone"     => "🗄️",
-        "cor"       => "#ff8700", // Laranja McLaren para combinar com seu tema!
+        "cor"       => "#ff8700", 
         "conceitos" => "PDO, MariaDB, foreach, htmlspecialchars",
+    ],
+    // 👇 NOVAS AULAS ADICIONADAS ABAIXO 👇
+    [
+        "numero"    => "06",
+        "nome"      => "Autenticação com Sessões",
+        "descricao" => "Sistema de login seguro, controle de acesso a áreas restritas e botão de logout.",
+        "link"      => "04_sessoes/login.php",
+        "icone"     => "🔒",
+        "cor"       => "#cf1c21", // Vermelho
+        "conceitos" => '$_SESSION, auth, controle de rotas, destroy',
+    ],
+    [
+        "numero"    => "07 e 08",
+        "nome"      => "CRUD Completo (Portfólio)",
+        "descricao" => "Gerenciador de projetos completo operando direto no banco: listar, cadastrar, editar e excluir.",
+        "link"      => "05_crud/index.php",
+        "icone"     => "⚙️",
+        "cor"       => "#8a2be2", // Roxo
+        "conceitos" => "CRUD, INSERT, UPDATE, DELETE, GET/POST",
     ]
 ];
 ?>
@@ -83,7 +101,7 @@ $aulas = [
             Suba o servidor PHP na <strong>raiz</strong> para acessar todas as aulas:
         </p>
         <div style="background: #010000; color: #a8e6a3; padding: 10px 16px; border-radius: 6px; margin-top: 10px; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.8;">
-            cd ~/workspaces/2026-DWII<br>php -S 0.0.0.0:8000
+            cd ~/workspace<br>php -S 0.0.0.0:8000
         </div>
         <p style="font-size: 13px; color: #6b7280; margin-top: 8px;">
             Esta página é o hub de navegação. Use os botões abaixo para acessar cada projeto.

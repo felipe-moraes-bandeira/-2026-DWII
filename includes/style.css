@@ -4,7 +4,6 @@
  * Disciplina : Desenvolvimento Web II
  * ════════════════════════════════════════════════════════════ */
 
-
 /* ── Reset ───────────────────────────────────── */
 * {
   box-sizing: border-box;
@@ -112,6 +111,8 @@ label:first-of-type {
 
 /* Campos */
 input[type="text"],
+input[type="url"],
+input[type="number"],
 textarea {
   width: 100%;
   padding: 11px;
@@ -124,35 +125,74 @@ textarea {
 }
 
 input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
 textarea:focus {
   border-color: #ff8700;
   outline: none;
   box-shadow: 0 0 10px #ff870088;
 }
 
-/* ── Botões ───────────────────────────────── */
-button[type="submit"] {
-  margin-top: 20px;
-  background: #ff8700;
-  color: #111;
-  border: none;
-  padding: 12px 30px;
+/* ── Botões (Primário, Secundário e Perigo) ── */
+button[type="submit"],
+.btn-primario,
+.btn-secundario,
+.btn-cancelar,
+.btn-perigo {
+  display: inline-block;
+  padding: 12px 24px;
   border-radius: 7px;
   font-size: 15px;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.25s;
-  box-shadow: 0 0 10px #ff870055;
+  border: none;
+  text-align: center;
+  font-family: inherit;
 }
 
-button[type="submit"]:hover {
+/* Botão Laranja (Salvar/Novo) */
+button[type="submit"],
+.btn-primario {
+  background: #ff8700;
+  color: #111;
+  box-shadow: 0 0 10px #ff870055;
+}
+button[type="submit"]:hover,
+.btn-primario:hover {
   background: #ffa13a;
   transform: translateY(-2px);
   box-shadow: 0 0 20px #ff8700aa;
 }
 
-/* ── Alertas ─────────────────────────────── */
+/* Botão Cinza (Cancelar/Voltar) */
+.btn-secundario,
+.btn-cancelar {
+  background: #333;
+  color: #ddd;
+}
+.btn-secundario:hover,
+.btn-cancelar:hover {
+  background: #444;
+  color: #fff;
+  transform: translateY(-2px);
+}
 
+/* Botão Vermelho (Excluir) */
+.btn-perigo {
+  background: #cf1c21;
+  color: #fff;
+  box-shadow: 0 0 10px #cf1c2155;
+}
+.btn-perigo:hover {
+  background: #ff3b3b;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #cf1c21aa;
+}
+
+
+/* ── Alertas ─────────────────────────────── */
 /* ERRO */
 .alerta-erro {
   background: #2b1010;
@@ -181,6 +221,16 @@ button[type="submit"]:hover {
   margin-top: 0;
 }
 
+/* BEM VINDO */
+.bemVindo {
+  text-align: center;
+  background: #0f2916;
+  border-left: 4px solid #36d46f;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-top: 20px;
+}
+
 /* ── Rodapé ─────────────────────────────── */
 footer {
   background: #000;
@@ -191,11 +241,163 @@ footer {
   font-size: 14px;
   border-top: 2px solid #ff870044;
 }
-.bemVindo{
- text-align: center;
-  background: #0f2916;
-  border-left: 4px solid #36d46f;
-  border-radius: 0 8px 8px 0;
-  padding: 18px 22px;
-  margin-top: 20px;
+.formulario {
+  background: #151515;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.label-campo {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #ffbb66;
+}
+
+.input-texto {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #0f0f0f;
+  color: #eee;
+  transition: 0.25s;
+  font-family: inherit;
+}
+
+.input-texto:focus {
+  border-color: #ff8700;
+  outline: none;
+  box-shadow: 0 0 10px #ff870088;
+}
+.logout-container {
+  margin-top: 24px;
+  text-align: center;
+}
+/* ── Listagem de Projetos (index.php) ──────── */
+.header-acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.header-acoes h1 {
+  margin: 0;
+}
+
+.estado-vazio {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.estado-vazio .icone {
+  font-size: 40px;
+  margin: 0 0 12px;
+}
+
+.estado-vazio .texto {
+  font-size: 16px;
+  margin: 0 0 16px;
+  color: #aaa;
+}
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-projeto h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #ff8700;
+}
+
+.card-projeto .descricao {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.card-projeto .meta {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #888;
+}
+
+.projeto-acoes {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contador-projetos {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #777;
+  text-align: right;
+}
+
+/* Ajuste para remover a margem do parágrafo dentro dos alertas */
+.alerta-sucesso p {
+  margin: 0;
+}
+/* ── Catálogo de Tecnologias (03_pdo) ──────── */
+.aula-info {
+  margin-bottom: 30px;
+  border-left: 4px solid #36d46f; /* Destaque verde para diferenciar dos projetos */
+}
+
+.contador-tecnologias {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.card-header-tec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-header-tec h3 {
+  margin: 0;
+}
+
+.badge-categoria {
+  background: #1a1a1a;
+  color: #ffbb66;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #ff870044;
+  white-space: nowrap;
+}
+
+.link-detalhes {
+  color: #ff8700;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.link-detalhes:hover {
+  color: #ffa13a;
+  text-shadow: 0 0 8px #ff870088;
+  transform: translateX(4px); /* Animação setinha indo pra direita */
 }
