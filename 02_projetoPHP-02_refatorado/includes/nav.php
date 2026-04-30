@@ -69,7 +69,7 @@ $logado = isset($_SESSION['usuario']);
     📬 Contato
   </a>
 
-  <a href="<?php echo $caminho_raiz; ?>catalogo.php"
+  <a href="<?php echo $caminho_raiz; ?>03_pdo/catalogo.php"
      <?php echo menu_class('catalogo', $pagina_atual); ?>>
     🗄️ Catálogo
   </a>

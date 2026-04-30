@@ -10,13 +10,13 @@
 
 $nome           = "[Felipe Moraes Bandeira]";
 $pagina_atual   = "sobre";        // define o item ativo no menu
-$caminho_raiz   = "../";          // sobe um nível até 2026-DWII/
+$caminho_raiz   = "./";          // sobe um nível até 2026-DWII/
 $titulo_pagina  = "Sobre Mim — {$nome}";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <?php include '../includes/cabecalho.php'; ?>
+    <?php include './includes/cabecalho.php'; ?>
     </head>
 <body>
 <h3> Felipe.M.Bandeira</h3> 
@@ -31,6 +31,6 @@ Busco constantemente aprimorar meus conhecimentos, integrando minha formação a
    por: felipe moraes bandeira, 3° ano - 2026
  </footer>
 
-    <?php include '../includes/rodape.php'; ?>
+    <?php include './includes/rodape.php'; ?>
 </body>
 </html>

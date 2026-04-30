@@ -33,7 +33,7 @@
 // que ocorreria se uma página chamasse session_start() antes
 // de incluir este cabecalho.
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+    session_status();
 }
 
 // ── 2. Fallbacks defensivos ──────────────────────────────────
@@ -43,6 +43,7 @@ if (session_status() === PHP_SESSION_NONE) {
 if (!isset($titulo_pagina)) $titulo_pagina = 'Portfólio DWII';
 if (!isset($caminho_raiz))  $caminho_raiz  = './';
 if (!isset($pagina_atual))  $pagina_atual  = '';
+
 ?>
 <!-- ── 3. Tags do <head> ──────────────────────────────────── -->
 <meta charset="UTF-8">
